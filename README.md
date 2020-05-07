@@ -21,6 +21,13 @@ After selecting a file, the program shows a window, like:
 
 ![image2](images/package_embedder_2.png)
 
+By default all embeddable packages will be selected. The user can now deselect one of more packages.  
+The field *prefer_installed* can be used to indicate that at run time an already present version of that package
+will be used. If *prefer_installed* is deselected (default), the embedded version will be used anyway.  
+The field *py_files_only* is selected by default, meaning that only .py files will be copied. If the package has also 
+useful non .py files (like fonts or images), deselect this field.
+
+
 
 ## API  
 There are two Many
