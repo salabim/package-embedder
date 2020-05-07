@@ -1,4 +1,5 @@
 # package-embedder
+## Introduction
 The program *package_embedder* can be used to embed pure Python packages in
 - a script
 - a module
