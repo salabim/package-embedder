@@ -8,7 +8,7 @@ guaranteed that a specific version of a package is used.
 
 The program can be used as an API or via the GUI.
 
-#GUI
+# GUI
 The GUI is started by running the program.
 This will show a file selection dialog:
 ![image1](images/package_embedder_1.png)
@@ -16,7 +16,7 @@ Here the user can select a Python file in which one or more packages have to be 
 Note that only the packages that are imported in the program will be selectable in the next stage.
 
 
-#API  
+# API  
 There are two Many
 
 
