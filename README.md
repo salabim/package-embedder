@@ -25,7 +25,10 @@ By default all embeddable packages will be selected. The user can now deselect o
 The field *prefer_installed* can be used to indicate that at run time an already present version of that package
 will be used. If *prefer_installed* is deselected (default), the embedded version will be used anyway.  
 The field *py_files_only* is selected by default, meaning that only .py files will be copied. If the package has also 
-useful non .py files (like fonts or images), deselect this field.
+useful non .py files (like fonts or images), deselect this field.  
+When ready, the Generate button can be used to generate the output file. This file is always stored in the same folder as
+the input file and will have the extension *.embedded.py* instead of *.py*. So the embedded version of *ruudlib test.py* is *ruudlib test.embedded.py*.
+
 
 
 
