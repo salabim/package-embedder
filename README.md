@@ -8,8 +8,7 @@ guaranteed that a specific version of a package is used.
 
 The program can be used as an API or via the GUI.
 
-API
-
+API  
 Many
 
 
