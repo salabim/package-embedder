@@ -10,9 +10,9 @@ The main purpose of *package embedder* is to distribute programs or packages wit
 installing those packages.
 
 Embedding a package(s) has some consequences:
-- the file becomes bigger (appr. 25% of tyhe size of the package source)
+- the file becomes bigger (appr. 25% of type size of the package source)
 - loading the file may take longer
-- one or more directories (called `embdedded <package> are created in the system temporary that are not automatically removed.
+- one or more directories (called `embdedded <package>` are created in the system temporary that are not automatically removed.
 The directory will be reused however upon loading the same package. 
 
 The program can be used as an API or via the GUI.
