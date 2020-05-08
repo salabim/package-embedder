@@ -70,8 +70,22 @@ the function has the following docstring
         when a package is not found or not embeddable, it is excluded from this list
 
 ```
-- `get_embeddable_pacakes` used to get all embeddable packages in a given .
-y file
+- `get_embeddable_pacakes` used to get all embeddable packages in a given .py file  
+the function has the following docstring  
+```
+    get all embeddable packages in a given file
+
+    Arguments
+    ---------
+    infile : file or pathlib.Path
+        file to be scanned for embeddable packages
+
+    Returns
+    -------
+    embeddable packages in infile : list
+        [] if no embeddable packages are found in infile
+```
+
 
 
 
