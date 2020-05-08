@@ -15,7 +15,10 @@ The program can be used as an API or via the GUI.
 The GUI is started by running the program.
 This will show a file selection dialog:
 ![image1](images/package_embedder_1.png)
+
 Here the user can select a Python file in which one or more packages have to be embedded.  
+When the user presses the Browse button a file selection popup will make it possible to easily select a file:
+![image4](images/package_embedder_4.png)
 
 If there are no embeddable packages imported in the selected file, a popup will appear.
 
