@@ -35,7 +35,9 @@ the input file and will have the extension *.embedded.py* instead of *.py*. So t
 ## API  
 There are two functions in package_embedder
 - `embed_package`
-- `get_embeddable_pacakes
+to be used to embad one of more packages in a given .py file.  
+the structure ...
+- `get_embeddable_pacakes`
 
 
 ![image3](images/package_embedder_3.png)
