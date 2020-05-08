@@ -90,6 +90,14 @@ This how *package_embedder* gets the embeddable packages
 - the program checks for occurences of lines with an `import <package>' or `from <package> import`
 - for each of the `<package>`s it will try and find a matching installation in the folders 
 in `sys.path`
-- only the current working directory and folders ending eith  `site-packages` are considered
+- only the current working directory and folders ending with  `site-packages` are considered
 - folders need  to contain a `__init__.py` file
+    
+The actual embedding works as follows
+- if any package is to be embedded, a function `copy_contents` will be added at the front of
+the output file
+- for each package to be embedded a line `copy_content(...)` will be added
+- the `copy_contents` call will include the package name, a prefer_installed flag and a list of all
+filenames and their encoded, zipped contents to be copied to the target directory
+
 
