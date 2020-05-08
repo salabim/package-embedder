@@ -5,7 +5,9 @@ The program *package_embedder* can be used to embed pure Python packages in
 - a module
 
 That means that the user of the program or scripy doesn't have to install the packages or it is
-guaranteed that a specific version of a package is used.
+guaranteed that a specific version of a package is used.  
+The main purpose of *package embedder* is to distribute programs or packages with dependencies without
+installing those packages.
 
 The program can be used as an API or via the GUI.
 
