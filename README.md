@@ -9,6 +9,12 @@ guaranteed that a specific version of a package is used.
 The main purpose of *package embedder* is to distribute programs or packages with dependencies without
 installing those packages.
 
+Embedding a package(s) has some consequences:
+- the file becomes bigger (appr. 25% of tyhe size of the package source)
+- loading the file may take longer
+- one or more directories (called `embdedded <package> are created in the system temporary that are not automatically removed.
+The directory will be reused however upon loading the same package. 
+
 The program can be used as an API or via the GUI.
 
 ## GUI
@@ -104,5 +110,13 @@ the output file
 - for each package to be embedded a line `copy_content(...)` will be added
 - the `copy_contents` call will include the package name, a prefer_installed flag and a list of all
 filenames and their encoded, zipped contents to be copied to the target directory
+
+At run time:
+- the `copy_contents` function will create a directory `embedded <package>` in the temporary folder.
+- All files as given will be unzipped, and decoded and written in that directory.
+- When `prefer_installed` is True, the created folder will be added at the end of `sys.path`  
+When `prefer_installed` is False, the created folder will be added to the front of `sys.path`
+
+For the GUI, *package_embedder* uses the excellent PySimpleGUI package.
 
 
