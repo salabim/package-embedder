@@ -28,9 +28,8 @@ The field *py_files_only* is selected by default, meaning that only .py files wi
 useful non .py files (like fonts or images), deselect this field.  
 When ready, the Generate button can be used to generate the output file. This file is always stored in the same folder as
 the input file and will have the extension *.embedded.py* instead of *.py*. So the embedded version of *ruudlib test.py* is *ruudlib test.embedded.py*.
-
-
-
+If the file is written correctly, a popup will confirm that:
+![image3](images/package_embedder_3.png)
 
 ## API  
 There are two functions in package_embedder
@@ -86,8 +85,11 @@ the function has the following docstring
         [] if no embeddable packages are found in infile
 ```
 
+## Internals
+This how *package_embedder* gets the embeddable packages
+- the program checks for occurences of lines with an `import <package>' or `from <package> import`
+- for each of the `<package>`s it will try and find a matching installation in the folders 
+in `sys.path`
+- only the current working directory and folders ending eith  `site-packages` are considered
+- folders need  to contain a `__init__.py` file
 
-
-
-![image3](images/package_embedder_3.png)
-test
