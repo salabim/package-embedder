@@ -103,6 +103,7 @@ This how *package_embedder* gets the embeddable packages
 in `sys.path`
 - only the current working directory and folders ending with  `site-packages` are considered
 - folders need  to contain a `__init__.py` file
+- some packages (numpy, PIL, scipy, pandas, cv2) will be excluded automatically
     
 The actual embedding works as follows
 - if any package is to be embedded, a function `copy_contents` will be added at the front of
