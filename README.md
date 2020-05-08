@@ -35,9 +35,44 @@ the input file and will have the extension *.embedded.py* instead of *.py*. So t
 ## API  
 There are two functions in package_embedder
 - `embed_package`
-to be used to embad one of more packages in a given .py file.  
-the structure ...
-- `get_embeddable_pacakes`
+to be used to embed one of more packages in a given .py file.  
+the function has the following docstring  
+```
+    build outfile from infile with package(s) as mentioned in package embedded
+
+    Arguments
+    ---------
+    infile : str or pathlib.Path
+        input file
+
+    package : str or tuple/list of str
+        package(s) to be embedded
+
+    prefer_installed : bool or tuple/list of bool
+        if False (default), mark as to always use the embedded version (at run time)
+        if True, mark as to try and use the installed version of package (at run time)
+        if multiple packages are specified and prefer_installed is a scalar, the value will
+            be applied for all packages
+
+    py_files_only : bool or tuple/list of bool
+        if True (default), embed only .py files
+        if False, embed all files, which can be useful for certain data, fonts, etc, to be present
+        if multiple packages are specified and py_files_only is a scalar, the value will
+            be applied for all packages
+
+    outfile : str or pathlib.Path
+        output file
+        if None, use infile with extension .embedded.py instead of .py
+
+    Returns
+    -------
+    packages embedded : list
+        when a package is not found or not embeddable, it is excluded from this list
+
+```
+- `get_embeddable_pacakes` used to get all embeddable packages in a given .
+y file
+
 
 
 ![image3](images/package_embedder_3.png)
