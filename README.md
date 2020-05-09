@@ -126,6 +126,7 @@ At run time:
 - When `prefer_installed` is True, the created folder will be added at the end of `sys.path`  
 When `prefer_installed` is False, the created folder will be added to the front of `sys.path`
 
-For the GUI, *package_embedder* uses the excellent PySimpleGUI package.
+For the GUI, *package_embedder* uses the excellent *PySimpleGUI* package.  
+It is not necessary to install *PySimpleGUI* as this package is embedded in the program (with *package embedder*  of course).
 
 
