@@ -95,6 +95,10 @@ the function has the following docstring
     embeddable packages in infile : list
         [] if no embeddable packages are found in infile
 ```
+Example usage
+```
+embed_package("ruudlib test.py", package=("ruudlib0", "ruudlib1"), prefer_installed=True))
+```
 
 ## Internals
 This how *package_embedder* gets the embeddable packages
