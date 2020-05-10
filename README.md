@@ -4,9 +4,9 @@ The program *package_embedder* can be used to embed pure Python packages in
 - a script
 - a module
 
-That means that the user of the program or scripy doesn't have to install the packages or it is
+That means that the user of the program or script doesn't have to install the packages or it is
 guaranteed that a specific version of a package is used.  
-The main purpose of *package embedder* is to distribute programs or packages with dependencies without
+The main purpose of *package embedder* is to make distribution of programs or packages with dependencies possible without
 installing those packages.
 
 Embedding a package(s) has some consequences:
@@ -106,7 +106,7 @@ embed_package("ruudlib test.py", package=("ruudlib0", "ruudlib1"), prefer_instal
 
 ## Internals
 This how *package_embedder* gets the embeddable packages
-- the program checks for occurences of lines with an `import <package>' or `from <package> import`
+- the program checks for occurrences of lines with an `import <package>' or `from <package> import`
 - for each of the `<package>`s it will try and find a matching installation in the folders 
 in `sys.path`
 - only the current working directory and folders ending with  `site-packages` are considered
