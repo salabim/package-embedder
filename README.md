@@ -10,12 +10,12 @@ The main purpose of *package embedder* is to make distribution of programs or pa
 installing those packages.
 
 Embedding a package(s) has some consequences:
-- the file becomes bigger (appr. 25% of type size of the package source)
+- the file becomes bigger (appr. 25% of the size of the package source)
 - loading the file may take longer
-- one or more directories (called `embdedded <package>` are created in the system temporary that are not automatically removed.
+- one or more directories (called `embdedded <package>` are created in the system temporary directory that are not automatically removed.
 The directory will be reused however upon loading the same package. 
 
-The program can be used as an API or via the GUI.
+The program can be used via a GUI or as an API.
 
 ## GUI
 The GUI is started by running the program.
@@ -26,7 +26,7 @@ Here the user can select a Python file in which one or more packages have to be 
 When the user presses the Browse button a file selection popup will make it possible to easily select a file:
 ![image4](images/package_embedder_4.png)
 
-If there are no embeddable packages imported in the selected file, a popup will appear.
+If there are no embeddable packages imported in the selected file, a warning popup will appear.
 
 After selecting a file, the program shows a window, like:
 
